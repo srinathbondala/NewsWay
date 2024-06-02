@@ -98,9 +98,10 @@ public class MainActivity extends AppCompatActivity implements categoryRVAdaptor
         loadimgPB.setVisibility(View.VISIBLE);
         articlesArrayList.clear();
         articleslist.clear();
-        String url_search = "https://newsapi.org/v2/everything?q="+category+"&sortBy=popularity&apikey=650df8ee033d4e78a591abca5764457e";
-        String catURL="https://newsapi.org/v2/top-headlines?country=in&everything?q="+category+"&apiKey=650df8ee033d4e78a591abca5764457e";
-        String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey=650df8ee033d4e78a591abca5764457e";
+        String apikey="650df8ee033d4e78a591abca5764457f"; //replace with api key
+        String url_search = "https://newsapi.org/v2/everything?q="+category+"&sortBy=popularity&apikey="+apikey; //replace with api key
+        String catURL="https://newsapi.org/v2/top-headlines?country=in&everything?q="+category+"&apiKey="+apikey; //replace with api key
+        String url = "https://newsapi.org/v2/top-headlines?country=in&apiKey="+apikey; //replace with api key
         String base = "https://newsapi.org/";
         Retrofit retrofit = new Retrofit.Builder().baseUrl(base).addConverterFactory(GsonConverterFactory.create()).build();
         retrofitapi Retrofitapi = retrofit.create(retrofitapi.class);
