@@ -34,7 +34,9 @@ public class categoryRVAdaptor extends RecyclerView.Adapter<categoryRVAdaptor.Vi
     @Override
     public void onBindViewHolder(@NonNull categoryRVAdaptor.ViewHolder holder, int position) {
         CatagoryRV cv = catagoryRVS.get(position);
-        holder.tv.setText(cv.getCategory());
+        if(cv.getCategory()!=null) {
+            holder.tv.setText(cv.getCategory());
+        }
         if(holder.iv==null){
             Picasso.get().load("https://th.bing.com/th/id/OIP.o2zHZJHUpP5nqn1GmyuPzgHaDY?w=274&h=160&c=7&r=0&o=5&dpr=1.5&pid=1.7").into((holder.iv));
         }
