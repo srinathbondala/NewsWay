@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">News way</string>
+    <string name="heading">Heading</string>
+    <string name="time">time</string>
+    <string name="topic">topic</string>
+    <string name="todo">TODO</string>
+    <string name="source">source</string>
+</resources>
